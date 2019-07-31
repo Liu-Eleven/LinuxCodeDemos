@@ -1,0 +1,6 @@
+#! /bin/sh  
+
+java -jar test.jar 2>&1 | tee err.log
+
+
+

@@ -1,0 +1,9 @@
+KDIR := /home/jason/v3s/spi-nand-qt-v1/qt-spinand/linux-3.4
+TARGET = lcdbacklight
+EXEC = $(TARGET)
+obj-m :=$(TARGET).o
+PWD :=$(shell pwd)
+all:
+	$(MAKE) -C $(KDIR) M=$(PWD) ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- modules
+clean:
+	rm -rf *.o *~core.depend.*.cmd *.ko *.mod.c *.order *.symvers .tmp_versions $(TARGET)

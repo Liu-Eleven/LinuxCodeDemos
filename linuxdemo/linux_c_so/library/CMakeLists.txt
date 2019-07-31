@@ -1,0 +1,5 @@
+SET(LIBSRC caculate.c)
+SET(LIBRARY_OUTPUT_PATH ../bin)
+
+# ADD_LIBRARY(libname [SHARED|STATIC|MODULE][EXCLUDE_FROM_ALL]source1 source2 ... sourceN)
+ADD_LIBRARY(caculate SHARED ${LIBSRC})

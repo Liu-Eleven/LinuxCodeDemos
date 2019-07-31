@@ -1,0 +1,645 @@
+# Makefile.in generated automatically by automake 1.5 from Makefile.am.
+# KDE tags expanded automatically by am_edit - $Revision: 1.339 $ 
+
+# Copyright 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001
+# Free Software Foundation, Inc.
+# This Makefile.in is free software; the Free Software Foundation
+# gives unlimited permission to copy and/or distribute it,
+# with or without modifications, as long as this notice is preserved.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY, to the extent permitted by law; without
+# even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+@SET_MAKE@
+
+####### kdevelop will overwrite this part!!! (begin)##########
+
+SHELL = @SHELL@
+
+srcdir = @srcdir@
+top_srcdir = @top_srcdir@
+VPATH = @srcdir@
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+
+bindir = @bindir@
+sbindir = @sbindir@
+libexecdir = @libexecdir@
+datadir = @datadir@
+sysconfdir = @sysconfdir@
+sharedstatedir = @sharedstatedir@
+localstatedir = @localstatedir@
+libdir = @libdir@
+infodir = @infodir@
+mandir = @mandir@
+includedir = @includedir@
+oldincludedir = /usr/include
+pkgdatadir = $(datadir)/@PACKAGE@
+pkglibdir = $(libdir)/@PACKAGE@
+pkgincludedir = $(includedir)/@PACKAGE@
+top_builddir = ..
+
+ACLOCAL = @ACLOCAL@
+AUTOCONF = @AUTOCONF@
+AUTOMAKE = @AUTOMAKE@
+AUTOHEADER = @AUTOHEADER@
+
+INSTALL = @INSTALL@
+INSTALL_PROGRAM = @INSTALL_PROGRAM@
+INSTALL_DATA = @INSTALL_DATA@
+INSTALL_SCRIPT = @INSTALL_SCRIPT@
+INSTALL_HEADER = $(INSTALL_DATA)
+transform = @program_transform_name@
+NORMAL_INSTALL = :
+PRE_INSTALL = :
+POST_INSTALL = :
+NORMAL_UNINSTALL = :
+PRE_UNINSTALL = :
+POST_UNINSTALL = :
+build_alias = @build_alias@
+build_triplet = @build@
+host_alias = @host_alias@
+host_triplet = @host@
+target_alias = @target_alias@
+target_triplet = @target@
+AMTAR = @AMTAR@
+ARTSCCONFIG = @ARTSCCONFIG@
+AS = @AS@
+AUTODIRS = @AUTODIRS@
+AWK = @AWK@
+CC = @CC@
+CONF_FILES = @CONF_FILES@
+CPP = @CPP@
+CXX = @CXX@
+CXXCPP = @CXXCPP@
+DCOPIDL = @DCOPIDL@
+DCOPIDL2CPP = @DCOPIDL2CPP@
+DCOP_DEPENDENCIES = @DCOP_DEPENDENCIES@
+DEPDIR = @DEPDIR@
+DLLTOOL = @DLLTOOL@
+DOXYGEN = @DOXYGEN@
+DOXYGEN_PROJECT_NAME = @DOXYGEN_PROJECT_NAME@
+DOXYGEN_PROJECT_NUMBER = @DOXYGEN_PROJECT_NUMBER@
+DPMSINC = @DPMSINC@
+DPMSLIB = @DPMSLIB@
+ECHO = @ECHO@
+EXEEXT = @EXEEXT@
+FRAMEWORK_COREAUDIO = @FRAMEWORK_COREAUDIO@
+GCJ = @GCJ@
+GCJFLAGS = @GCJFLAGS@
+GLINC = @GLINC@
+GLLIB = @GLLIB@
+GMSGFMT = @GMSGFMT@
+IDL = @IDL@
+IDL_DEPENDENCIES = @IDL_DEPENDENCIES@
+INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
+JAR = @JAR@
+JAVAC = @JAVAC@
+JAVAH = @JAVAH@
+JVMLIBS = @JVMLIBS@
+KDECONFIG = @KDECONFIG@
+KDE_EXTRA_RPATH = @KDE_EXTRA_RPATH@
+KDE_HAS_DOXYGEN = @KDE_HAS_DOXYGEN@
+KDE_HAVE_DOT = @KDE_HAVE_DOT@
+KDE_INCLUDES = @KDE_INCLUDES@
+KDE_LDFLAGS = @KDE_LDFLAGS@
+KDE_MT_LDFLAGS = @KDE_MT_LDFLAGS@
+KDE_MT_LIBS = @KDE_MT_LIBS@
+KDE_PLUGIN = @KDE_PLUGIN@
+KDE_RPATH = @KDE_RPATH@
+KDE_USE_CLOSURE_FALSE = @KDE_USE_CLOSURE_FALSE@
+KDE_USE_CLOSURE_TRUE = @KDE_USE_CLOSURE_TRUE@
+KDE_USE_FINAL_FALSE = @KDE_USE_FINAL_FALSE@
+KDE_USE_FINAL_TRUE = @KDE_USE_FINAL_TRUE@
+KDE_XSL_STYLESHEET = @KDE_XSL_STYLESHEET@
+LEX = @LEX@
+LEXLIB = @LEXLIB@
+LIBCOMPAT = @LIBCOMPAT@
+LIBCRYPT = @LIBCRYPT@
+LIBDL = @LIBDL@
+LIBGEN = @LIBGEN@
+LIBJPEG = @LIBJPEG@
+LIBMICO = @LIBMICO@
+LIBOBJS = @LIBOBJS@
+LIBPNG = @LIBPNG@
+LIBPTHREAD = @LIBPTHREAD@
+LIBPYTHON = @LIBPYTHON@
+LIBQIMGIO = @LIBQIMGIO@
+LIBRESOLV = @LIBRESOLV@
+LIBSHADOW = @LIBSHADOW@
+LIBSM = @LIBSM@
+LIBSOCKET = @LIBSOCKET@
+LIBTIFF = @LIBTIFF@
+LIBTOOL = @LIBTOOL@
+LIBUCB = @LIBUCB@
+LIBUTIL = @LIBUTIL@
+LIBXINERAMA = @LIBXINERAMA@
+LIBZ = @LIBZ@
+LIB_KAB = @LIB_KAB@
+LIB_KDECORE = @LIB_KDECORE@
+LIB_KDEPRINT = @LIB_KDEPRINT@
+LIB_KDEUI = @LIB_KDEUI@
+LIB_KFILE = @LIB_KFILE@
+LIB_KFM = @LIB_KFM@
+LIB_KHTML = @LIB_KHTML@
+LIB_KIMGIO = @LIB_KIMGIO@
+LIB_KIO = @LIB_KIO@
+LIB_KPARTS = @LIB_KPARTS@
+LIB_KSPELL = @LIB_KSPELL@
+LIB_KSYCOCA = @LIB_KSYCOCA@
+LIB_POLL = @LIB_POLL@
+LIB_QPE = @LIB_QPE@
+LIB_QT = @LIB_QT@
+LIB_QTOPIA = @LIB_QTOPIA@
+LIB_SMB = @LIB_SMB@
+LIB_X11 = @LIB_X11@
+LIB_XEXT = @LIB_XEXT@
+LN_S = @LN_S@
+MCOPIDL = @MCOPIDL@
+MEINPROC = @MEINPROC@
+MICO_INCLUDES = @MICO_INCLUDES@
+MICO_LDFLAGS = @MICO_LDFLAGS@
+MOC = @MOC@
+MSGFMT = @MSGFMT@
+NOOPT_CFLAGS = @NOOPT_CFLAGS@
+NOOPT_CXXFLAGS = @NOOPT_CXXFLAGS@
+NOREPO = @NOREPO@
+OBJDUMP = @OBJDUMP@
+OBJEXT = @OBJEXT@
+PACKAGE = @PACKAGE@
+PAMLIBS = @PAMLIBS@
+PASSWDLIBS = @PASSWDLIBS@
+PYTHONINC = @PYTHONINC@
+PYTHONLIB = @PYTHONLIB@
+PYTHONMODDIR = @PYTHONMODDIR@
+QTDOCDIR = @QTDOCDIR@
+QTE_NORTTI = @QTE_NORTTI@
+QTOPIA_INCLUDES = @QTOPIA_INCLUDES@
+QT_INCLUDES = @QT_INCLUDES@
+QT_LDFLAGS = @QT_LDFLAGS@
+RANLIB = @RANLIB@
+RC = @RC@
+REPO = @REPO@
+SETUIDFLAGS = @SETUIDFLAGS@
+STRIP = @STRIP@
+TOPSUBDIRS = @TOPSUBDIRS@
+UIC = @UIC@
+UIC_TR = @UIC_TR@
+USER_INCLUDES = @USER_INCLUDES@
+USER_LDFLAGS = @USER_LDFLAGS@
+USE_EXCEPTIONS = @USE_EXCEPTIONS@
+USE_RTTI = @USE_RTTI@
+USE_THREADS = @USE_THREADS@
+VERSION = @VERSION@
+WOVERLOADED_VIRTUAL = @WOVERLOADED_VIRTUAL@
+XGETTEXT = @XGETTEXT@
+XPMINC = @XPMINC@
+XPMLIB = @XPMLIB@
+X_EXTRA_LIBS = @X_EXTRA_LIBS@
+X_INCLUDES = @X_INCLUDES@
+X_LDFLAGS = @X_LDFLAGS@
+X_PRE_LIBS = @X_PRE_LIBS@
+all_includes = @all_includes@
+all_libraries = @all_libraries@
+am__include = @am__include@
+am__quote = @am__quote@
+idldir = @idldir@
+install_sh = @install_sh@
+jni_includes = @jni_includes@
+kde_appsdir = @kde_appsdir@
+kde_bindir = @kde_bindir@
+kde_confdir = @kde_confdir@
+kde_datadir = @kde_datadir@
+kde_htmldir = @kde_htmldir@
+kde_icondir = @kde_icondir@
+kde_includes = @kde_includes@
+kde_libraries = @kde_libraries@
+kde_libs_htmldir = @kde_libs_htmldir@
+kde_libs_prefix = @kde_libs_prefix@
+kde_locale = @kde_locale@
+kde_mimedir = @kde_mimedir@
+kde_moduledir = @kde_moduledir@
+kde_qtver = @kde_qtver@
+kde_servicesdir = @kde_servicesdir@
+kde_servicetypesdir = @kde_servicetypesdir@
+kde_sounddir = @kde_sounddir@
+kde_styledir = @kde_styledir@
+kde_templatesdir = @kde_templatesdir@
+kde_wallpaperdir = @kde_wallpaperdir@
+kde_widgetdir = @kde_widgetdir@
+micodir = @micodir@
+qt_includes = @qt_includes@
+qt_libraries = @qt_libraries@
+x_includes = @x_includes@
+x_libraries = @x_libraries@
+
+bin_PROGRAMS = qvfb
+
+#>- qvfb_SOURCES = skin.cpp qvfbview.cpp qvfbratedlg.cpp qvfb.cpp qanimationwriter.cpp main.cpp config.ui 
+#>+ 1
+qvfb_SOURCES=skin.cpp qvfbview.cpp qvfbratedlg.cpp qvfb.cpp qanimationwriter.cpp main.cpp   config.cpp
+SOURCES = skin.cpp qvfbview.cpp qvfbratedlg.cpp qvfb.cpp qanimationwriter.cpp main.cpp 
+INTERFACES = config.ui 
+TRANSLATIONS = 
+KDE_OPTIONS = qtonly
+qvfb_LDADD = $(LIB_QPE) $(LIB_QT) $(LIBSOCKET)
+
+EXTRA_DIST = config.ui gammaview.h main.cpp pda_down.png pda.skin pda_up.png qanimationwriter.cpp qanimationwriter.h qvfb.cpp qvfb.h qvfbratedlg.cpp qvfbratedlg.h qvfbview.cpp qvfbview.h README skin.cpp skin.h 
+
+####### kdevelop will overwrite this part!!! (end)############
+
+# set the include path for X, qt and KDE
+INCLUDES = $(all_includes)
+
+#>- qvfb_METASOURCES = AUTO
+
+# the library search path. 
+qvfb_LDFLAGS = $(all_libraries) 
+
+# them while "make clean", use CLEANFILES
+DISTCLEANFILES = $(qvfb_METASOURCES)
+subdir = qvfb
+mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
+CONFIG_HEADER = $(top_builddir)/config.h
+CONFIG_CLEAN_FILES =
+bin_PROGRAMS = qvfb$(EXEEXT)
+PROGRAMS = $(bin_PROGRAMS)
+
+am_qvfb_OBJECTS = skin.$(OBJEXT) qvfbview.$(OBJEXT) \
+	qvfbratedlg.$(OBJEXT) qvfb.$(OBJEXT) qanimationwriter.$(OBJEXT) \
+	main.$(OBJEXT)
+#>- qvfb_OBJECTS = $(am_qvfb_OBJECTS)
+#>+ 7
+qvfb_final_OBJECTS = qvfb.all_cpp.o 
+qvfb_nofinal_OBJECTS = skin.$(OBJEXT) qvfbview.$(OBJEXT) \
+	qvfbratedlg.$(OBJEXT) qvfb.$(OBJEXT) qanimationwriter.$(OBJEXT) \
+	main.$(OBJEXT) config.$(OBJEXT)\
+	qvfbratedlg.moc.o qvfb.moc.o gammaview.moc.o qvfbview.moc.o 
+@KDE_USE_FINAL_FALSE@qvfb_OBJECTS = $(qvfb_nofinal_OBJECTS)
+@KDE_USE_FINAL_TRUE@qvfb_OBJECTS = $(qvfb_final_OBJECTS)
+qvfb_DEPENDENCIES =
+
+DEFS = @DEFS@
+DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+CPPFLAGS = @CPPFLAGS@
+LDFLAGS = @LDFLAGS@
+LIBS = @LIBS@
+depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/main.Po $(DEPDIR)/qanimationwriter.Po \
+#>- @AMDEP_TRUE@	$(DEPDIR)/qvfb.Po $(DEPDIR)/qvfbratedlg.Po \
+#>- @AMDEP_TRUE@	$(DEPDIR)/qvfbview.Po $(DEPDIR)/skin.Po
+#>+ 7
+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/config.P $(DEPDIR)/qvfbratedlg.moc.P $(DEPDIR)/qvfb.moc.P $(DEPDIR)/gammaview.moc.P $(DEPDIR)/qvfbview.moc.P  $(DEPDIR)/qvfb.all_cpp.P  $(DEPDIR)/main.Po $(DEPDIR)/qanimationwriter.Po \
+	@AMDEP_TRUE@	$(DEPDIR)/qvfb.Po $(DEPDIR)/qvfbratedlg.Po \
+	@AMDEP_TRUE@	$(DEPDIR)/qvfbview.Po $(DEPDIR)/skin.Po
+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/config.P $(DEPDIR)/qvfbratedlg.moc.P $(DEPDIR)/qvfb.moc.P $(DEPDIR)/gammaview.moc.P $(DEPDIR)/qvfbview.moc.P  $(DEPDIR)/main.Po $(DEPDIR)/qanimationwriter.Po \
+	@AMDEP_TRUE@	$(DEPDIR)/qvfb.Po $(DEPDIR)/qvfbratedlg.Po \
+	@AMDEP_TRUE@	$(DEPDIR)/qvfbview.Po $(DEPDIR)/skin.Po
+
+#>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+#>- $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+#>+ 2
+CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS)
+#>- LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) \
+#>- $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+#>- $(AM_CXXFLAGS) $(CXXFLAGS)
+#>+ 3
+LTCXXCOMPILE = $(LIBTOOL) --mode=compile --tag=CXX $(CXX) $(DEFS) \
+	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+	$(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS)
+CXXLD = $(CXX)
+#>- CXXLINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) \
+#>- $(AM_LDFLAGS) $(LDFLAGS) -o $@
+#>+ 2
+CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
+	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+CXXFLAGS = @CXXFLAGS@
+DIST_SOURCES = $(qvfb_SOURCES)
+DIST_COMMON = README Makefile.am Makefile.in
+SOURCES = skin.cpp qvfbview.cpp qvfbratedlg.cpp qvfb.cpp qanimationwriter.cpp main.cpp 
+
+#>- all: all-am
+#>+ 1
+all: docs-am  all-am
+
+.SUFFIXES:
+.SUFFIXES: .cpp .lo .o .obj
+
+mostlyclean-libtool:
+	-rm -f *.lo
+
+clean-libtool:
+	-rm -rf .libs _libs
+
+distclean-libtool:
+	-rm -f libtool
+$(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+#>- 	cd $(top_srcdir) && \
+#>- $(AUTOMAKE) --gnu  qvfb/Makefile
+#>+ 3
+	cd $(top_srcdir) && \
+	$(AUTOMAKE) --gnu  qvfb/Makefile
+	cd $(top_srcdir) && perl admin/am_edit qvfb-1.1/qvfb/Makefile.in
+Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
+	cd $(top_builddir) && \
+	CONFIG_HEADERS= CONFIG_LINKS= \
+	CONFIG_FILES=$(subdir)/$@ $(SHELL) ./config.status
+install-binPROGRAMS: $(bin_PROGRAMS)
+	@$(NORMAL_INSTALL)
+	$(mkinstalldirs) $(DESTDIR)$(bindir)
+	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+	p1=`echo $$p|sed 's/$(EXEEXT)$$//'`; \
+	if test -f $$p \
+	|| test -f $$p1 \
+	; then \
+	f=`echo $$p1|sed '$(transform);s/$$/$(EXEEXT)/'`; \
+	echo " $(INSTALL_PROGRAM_ENV) $(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/$$f"; \
+	$(INSTALL_PROGRAM_ENV) $(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/$$f; \
+	else :; fi; \
+	done
+
+uninstall-binPROGRAMS:
+	@$(NORMAL_UNINSTALL)
+	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+	f=`echo $$p|sed 's/$(EXEEXT)$$//;$(transform);s/$$/$(EXEEXT)/'`; \
+	echo " rm -f $(DESTDIR)$(bindir)/$$f"; \
+	rm -f $(DESTDIR)$(bindir)/$$f; \
+	done
+
+clean-binPROGRAMS:
+	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
+qvfb$(EXEEXT): $(qvfb_OBJECTS) $(qvfb_DEPENDENCIES) 
+	@rm -f qvfb$(EXEEXT)
+	$(CXXLINK) $(qvfb_LDFLAGS) $(qvfb_OBJECTS) $(qvfb_LDADD) $(LIBS)
+
+mostlyclean-compile:
+	-rm -f *.$(OBJEXT) core *.core
+
+distclean-compile:
+	-rm -f *.tab.c
+
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/main.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/qanimationwriter.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/qvfb.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/qvfbratedlg.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/qvfbview.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/skin.Po@am__quote@
+
+distclean-depend:
+	-rm -rf $(DEPDIR)
+
+.cpp.o:
+@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(CXXCOMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
+
+.cpp.obj:
+@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(CXXCOMPILE) -c -o $@ `cygpath -w $<`
+
+.cpp.lo:
+@AMDEP_TRUE@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
+@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+	$(LTCXXCOMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
+CXXDEPMODE = @CXXDEPMODE@
+uninstall-info-am:
+
+tags: TAGS
+
+ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
+	list='$(SOURCES) $(HEADERS) $(TAGS_FILES)'; \
+	unique=`for i in $$list; do \
+	if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+	done | \
+	$(AWK) '    { files[$$0] = 1; } \
+	END { for (i in files) print i; }'`; \
+	mkid -fID $$unique $(LISP)
+
+TAGS:  $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) \
+	$(TAGS_FILES) $(LISP)
+	tags=; \
+	here=`pwd`; \
+	list='$(SOURCES) $(HEADERS) $(TAGS_FILES)'; \
+	unique=`for i in $$list; do \
+	if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+	done | \
+	$(AWK) '    { files[$$0] = 1; } \
+	END { for (i in files) print i; }'`; \
+	test -z "$(ETAGS_ARGS)$$unique$(LISP)$$tags" \
+	|| etags $(ETAGS_ARGS) $$tags  $$unique $(LISP)
+
+GTAGS:
+	here=`CDPATH=: && cd $(top_builddir) && pwd` \
+	&& cd $(top_srcdir) \
+	&& gtags -i $(GTAGS_ARGS) $$here
+
+distclean-tags:
+	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
+
+DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+
+top_distdir = ..
+distdir = $(top_distdir)/$(PACKAGE)-$(VERSION)
+
+distdir: $(DISTFILES)
+	@for file in $(DISTFILES); do \
+	if test -f $$file; then d=.; else d=$(srcdir); fi; \
+	dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+	if test "$$dir" != "$$file" && test "$$dir" != "."; then \
+	$(mkinstalldirs) "$(distdir)/$$dir"; \
+	fi; \
+	if test -d $$d/$$file; then \
+	cp -pR $$d/$$file $(distdir) \
+	|| exit 1; \
+	else \
+	test -f $(distdir)/$$file \
+	|| cp -p $$d/$$file $(distdir)/$$file \
+	|| exit 1; \
+	fi; \
+	done
+check-am: all-am
+check: check-am
+all-am: Makefile $(PROGRAMS)
+
+installdirs:
+	$(mkinstalldirs) $(DESTDIR)$(bindir)
+
+install: install-am
+install-exec: install-exec-am
+install-data: install-data-am
+uninstall: uninstall-am
+
+install-am: all-am
+	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
+
+installcheck: installcheck-am
+install-strip:
+	$(MAKE) $(AM_MAKEFLAGS) INSTALL_PROGRAM="$(INSTALL_STRIP_PROGRAM)" \
+	`test -z '$(STRIP)' || \
+	echo "INSTALL_PROGRAM_ENV=STRIPPROG='$(STRIP)'"` install
+mostlyclean-generic:
+
+clean-generic:
+
+distclean-generic:
+	-rm -f Makefile $(CONFIG_CLEAN_FILES) stamp-h stamp-h[0-9]*
+	-test -z "$(DISTCLEANFILES)" || rm -f $(DISTCLEANFILES)
+
+maintainer-clean-generic:
+	@echo "This command is intended for maintainers to use"
+	@echo "it deletes files that may require special tools to rebuild."
+#>- clean: clean-am
+#>+ 1
+clean: kde-rpo-clean  clean-am
+
+#>- clean-am: clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
+#>+ 1
+clean-am: clean-metasources clean-ui clean-final  clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
+
+distclean: distclean-am
+
+distclean-am: clean-am distclean-compile distclean-depend \
+	distclean-generic distclean-libtool distclean-tags
+
+dvi: dvi-am
+
+dvi-am:
+
+info: info-am
+
+info-am:
+
+install-data-am:
+
+install-exec-am: install-binPROGRAMS
+
+install-info: install-info-am
+
+install-man:
+
+installcheck-am:
+
+maintainer-clean: maintainer-clean-am
+
+maintainer-clean-am: distclean-am maintainer-clean-generic
+
+mostlyclean: mostlyclean-am
+
+mostlyclean-am: mostlyclean-compile mostlyclean-generic \
+	mostlyclean-libtool
+
+uninstall-am: uninstall-binPROGRAMS uninstall-info-am
+
+.PHONY: GTAGS all all-am check check-am clean clean-binPROGRAMS \
+	clean-generic clean-libtool distclean distclean-compile \
+	distclean-depend distclean-generic distclean-libtool \
+	distclean-tags distdir dvi dvi-am info info-am install \
+	install-am install-binPROGRAMS install-data install-data-am \
+	install-exec install-exec-am install-info install-info-am \
+	install-man install-strip installcheck installcheck-am \
+	installdirs maintainer-clean maintainer-clean-generic \
+	mostlyclean mostlyclean-compile mostlyclean-generic \
+	mostlyclean-libtool tags uninstall uninstall-am \
+	uninstall-binPROGRAMS uninstall-info-am
+
+# Tell versions [3.59,3.63) of GNU make to not export all variables.
+# Otherwise a system limit (for SysV at least) may be exceeded.
+.NOEXPORT:
+
+#>+ 11
+config.cpp: $(srcdir)/config.ui config.h config.moc
+	rm -f config.cpp
+	$(UIC) -i config.h $(srcdir)/config.ui > config.cpp || rm -f config.cpp
+	echo '#include "config.moc"' >> config.cpp
+
+config.h: $(srcdir)/config.ui
+	$(UIC) -o config.h $(srcdir)/config.ui
+
+config.moc: config.h
+	$(MOC) config.h -o config.moc
+
+#>+ 3
+qvfbratedlg.moc.cpp: $(srcdir)/qvfbratedlg.h
+	$(MOC) $(srcdir)/qvfbratedlg.h -o qvfbratedlg.moc.cpp
+
+#>+ 3
+qvfb.moc.cpp: $(srcdir)/qvfb.h
+	$(MOC) $(srcdir)/qvfb.h -o qvfb.moc.cpp
+
+#>+ 3
+gammaview.moc.cpp: $(srcdir)/gammaview.h
+	$(MOC) $(srcdir)/gammaview.h -o gammaview.moc.cpp
+
+#>+ 3
+qvfbview.moc.cpp: $(srcdir)/qvfbview.h
+	$(MOC) $(srcdir)/qvfbview.h -o qvfbview.moc.cpp
+
+#>+ 3
+clean-metasources:
+	-rm -f  qvfbratedlg.moc.cpp qvfb.moc.cpp gammaview.moc.cpp qvfbview.moc.cpp
+
+#>+ 4
+clean-ui:
+	-rm -f \
+	config.cpp config.h config.moc 
+
+#>+ 2
+docs-am:
+
+#>+ 6
+force-reedit:
+		cd $(top_srcdir) && \
+	$(AUTOMAKE) --gnu  qvfb/Makefile
+	cd $(top_srcdir) && perl admin/am_edit qvfb-1.1/qvfb/Makefile.in
+
+
+#>+ 11
+qvfb.all_cpp.cpp: $(srcdir)/Makefile.in  $(srcdir)/skin.cpp $(srcdir)/qvfbview.cpp $(srcdir)/qvfbratedlg.cpp $(srcdir)/qvfb.cpp $(srcdir)/qanimationwriter.cpp $(srcdir)/main.cpp config.cpp qvfbratedlg.moc.cpp qvfb.moc.cpp qvfbview.moc.cpp  config.moc
+	@echo 'creating qvfb.all_cpp.cpp ...'; \
+	rm -f qvfb.all_cpp.files qvfb.all_cpp.final; \
+	echo "#define KDE_USE_FINAL 1" >> qvfb.all_cpp.final; \
+	for file in skin.cpp qvfbview.cpp qvfbratedlg.cpp qvfb.cpp qanimationwriter.cpp main.cpp config.cpp qvfbratedlg.moc.cpp qvfb.moc.cpp qvfbview.moc.cpp ; do \
+	  echo "#include \"$$file\"" >> qvfb.all_cpp.files; \
+	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> qvfb.all_cpp.final; \
+	done; \
+	cat qvfb.all_cpp.final qvfb.all_cpp.files > qvfb.all_cpp.cpp; \
+	rm -f qvfb.all_cpp.final qvfb.all_cpp.files
+
+#>+ 3
+clean-final:
+	-rm -f qvfb.all_cpp.cpp
+
+#>+ 2
+final:
+	$(MAKE) qvfb_OBJECTS="$(qvfb_final_OBJECTS)" all-am
+#>+ 2
+final-install:
+	$(MAKE) qvfb_OBJECTS="$(qvfb_final_OBJECTS)" install-am
+#>+ 2
+no-final:
+	$(MAKE) qvfb_OBJECTS="$(qvfb_nofinal_OBJECTS)" all-am
+#>+ 2
+no-final-install:
+	$(MAKE) qvfb_OBJECTS="$(qvfb_nofinal_OBJECTS)" install-am
+#>+ 3
+cvs-clean:
+	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
+
+#>+ 3
+kde-rpo-clean:
+	-rm -f *.rpo
+
+#>+ 7
+$(srcdir)/qvfbratedlg.cpp: config.h 
+$(srcdir)/qvfb.cpp: config.h 
+$(srcdir)/skin.cpp: config.h 
+$(srcdir)/qvfbview.cpp: config.h 
+$(srcdir)/qanimationwriter.cpp: config.h 
+$(srcdir)/main.cpp: config.h 
