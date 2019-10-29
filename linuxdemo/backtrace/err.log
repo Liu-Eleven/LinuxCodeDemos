@@ -1,0 +1,56 @@
+file = backtrace.c, line = 62, func = print_reason.
+Obtained 6 stack frames.
+./test(+0xb0a) [0x7f3447e00b0a]
+/lib/x86_64-linux-gnu/libc.so.6(+0x3ef20) [0x7f344763ef20]
+./test(+0xd67) [0x7f3447e00d67]
+./test(+0xe81) [0x7f3447e00e81]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7) [0x7f3447621b97]
+./test(+0x9da) [0x7f3447e009da]
+7f34473e0000-7f34473f7000 r-xp 00000000 00:00 198529             /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f34473f7000-7f34473f8000 ---p 00017000 00:00 198529             /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f34473f8000-7f34475f6000 ---p 00000018 00:00 198529             /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f34475f6000-7f34475f7000 r--p 00016000 00:00 198529             /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f34475f7000-7f34475f8000 rw-p 00017000 00:00 198529             /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3447600000-7f34477e7000 r-xp 00000000 00:00 259727             /lib/x86_64-linux-gnu/libc-2.27.so
+7f34477e7000-7f34477f0000 ---p 001e7000 00:00 259727             /lib/x86_64-linux-gnu/libc-2.27.so
+7f34477f0000-7f34479e7000 ---p 000001f0 00:00 259727             /lib/x86_64-linux-gnu/libc-2.27.so
+7f34479e7000-7f34479eb000 r--p 001e7000 00:00 259727             /lib/x86_64-linux-gnu/libc-2.27.so
+7f34479eb000-7f34479ed000 rw-p 001eb000 00:00 259727             /lib/x86_64-linux-gnu/libc-2.27.so
+7f34479ed000-7f34479f1000 rw-p 00000000 00:00 0
+7f3447a00000-7f3447a26000 r-xp 00000000 00:00 259549             /lib/x86_64-linux-gnu/ld-2.27.so
+7f3447a26000-7f3447a27000 r-xp 00026000 00:00 259549             /lib/x86_64-linux-gnu/ld-2.27.so
+7f3447c27000-7f3447c28000 r--p 00027000 00:00 259549             /lib/x86_64-linux-gnu/ld-2.27.so
+7f3447c28000-7f3447c29000 rw-p 00028000 00:00 259549             /lib/x86_64-linux-gnu/ld-2.27.so
+7f3447c29000-7f3447c2a000 rw-p 00000000 00:00 0
+7f3447dd0000-7f3447dd2000 rw-p 00000000 00:00 0
+7f3447e00000-7f3447e01000 r-xp 00000000 00:00 221520             /mnt/e/desktop/backtrace/test
+7f3447e01000-7f3447e02000 r-xp 00001000 00:00 221520             /mnt/e/desktop/backtrace/test
+7f3448001000-7f3448002000 r--p 00001000 00:00 221520             /mnt/e/desktop/backtrace/test
+7f3448002000-7f3448003000 rw-p 00002000 00:00 221520             /mnt/e/desktop/backtrace/test
+7fffbd289000-7fffbd2aa000 rw-p 00000000 00:00 0                  [heap]
+7fffc4597000-7fffc4d97000 rw-p 00000000 00:00 0                  [stack]
+7fffc5023000-7fffc5024000 r-xp 00000000 00:00 0                  [vdso]
+Read MAPS file success!
+reg[00]       = 0x00000000
+reg[01]       = 0x00000000
+reg[02]       = 0xbd289010
+reg[03]       = 0xbd289010
+reg[04]       = 0x47e009b0
+reg[05]       = 0xc4d95910
+reg[06]       = 0x00000000
+reg[07]       = 0x00000000
+reg[08]       = 0x00000001
+reg[09]       = 0xbd289260
+reg[10]       = 0xc4d95770
+reg[11]       = 0x00000000
+reg[12]       = 0x479ed8c0
+reg[13]       = 0x00000000
+reg[14]       = 0xbd289010
+reg[15]       = 0xc4d95770
+reg[16]       = 0x47e00d67
+reg[17]       = 0x00010202
+reg[18]       = 0x002b0033
+reg[19]       = 0x00000000
+reg[20]       = 0x00000000
+reg[21]       = 0x00000000
+reg[22]       = 0x00000000
