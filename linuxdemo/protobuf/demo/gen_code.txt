@@ -1,0 +1,5 @@
+
+/usr/local/protobuf/bin/protoc -I=$PWD --cpp_out=$PWD $PWD/address.proto
+
+g++ -o write write.cpp address.pb.cc `pkg-config --cflags --libs protobuf`
+g++ -o read read.cpp address.pb.cc `pkg-config --cflags --libs protobuf`
