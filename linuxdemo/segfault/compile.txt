@@ -1,0 +1,1 @@
+arm-linux-gcc -rdynamic -o segfault segfault.c

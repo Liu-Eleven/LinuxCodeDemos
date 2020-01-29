@@ -4,6 +4,7 @@
 #include <execinfo.h>
 #include <time.h>
 #include <unistd.h>
+#include <ucontext.h>
 
 // compile
 // gcc -o test backtrace.c
@@ -53,8 +54,27 @@ static void print_reason(int sig, siginfo_t * info, void *secret)
 		printf("Read MAPS file fail!\n");
 	}
 
-	for (i = 0; i < NGREG; i++)
-		printf("reg[%02d]       = 0x%08x\n", i, ptrUC->uc_mcontext.gregs[i]);
+	// X86
+	//for (i = 0; i < NGREG; i++)
+	//	printf("reg[%02d]       = 0x%08x\n", i, ptrUC->uc_mcontext.gregs[i]);
+
+	// ARM
+	printf("arm_r0 = 0x%08x\n", ptrUC->uc_mcontext.arm_r0);
+	printf("arm_r1 = 0x%08x\n", ptrUC->uc_mcontext.arm_r1);
+	printf("arm_r2 = 0x%08x\n", ptrUC->uc_mcontext.arm_r2);
+	printf("arm_r3 = 0x%08x\n", ptrUC->uc_mcontext.arm_r3);
+	printf("arm_r4 = 0x%08x\n", ptrUC->uc_mcontext.arm_r4);
+	printf("arm_r5 = 0x%08x\n", ptrUC->uc_mcontext.arm_r5);
+	printf("arm_r6 = 0x%08x\n", ptrUC->uc_mcontext.arm_r6);
+	printf("arm_r7 = 0x%08x\n", ptrUC->uc_mcontext.arm_r7);
+	printf("arm_r8 = 0x%08x\n", ptrUC->uc_mcontext.arm_r8);
+	printf("arm_r9 = 0x%08x\n", ptrUC->uc_mcontext.arm_r9);
+	printf("arm_r10 = 0x%08x\n", ptrUC->uc_mcontext.arm_r10);
+	printf("arm_fp = 0x%08x\n", ptrUC->uc_mcontext.arm_fp);
+	printf("arm_ip = 0x%08x\n", ptrUC->uc_mcontext.arm_ip);
+	printf("arm_sp = 0x%08x\n", ptrUC->uc_mcontext.arm_sp);
+	printf("arm_lr = 0x%08x\n", ptrUC->uc_mcontext.arm_lr);
+	printf("arm_pc = 0x%08x\n", ptrUC->uc_mcontext.arm_pc);
 
 #else
 	FILE *f_err = fopen("err.log", "a+");
@@ -77,8 +97,27 @@ static void print_reason(int sig, siginfo_t * info, void *secret)
 		fprintf(f_err, "Read MAPS file fail!\n");
 	}
 
-	for (int i = 0; i < NGREG; i++)
-		fprintf(f_err, "reg[%02d]       = 0x%08x\n", i, ptrUC->uc_mcontext.gregs[i]);
+	// X86
+	//for (int i = 0; i < NGREG; i++)
+	//	fprintf(f_err, "reg[%02d]       = 0x%08x\n", i, ptrUC->uc_mcontext.gregs[i]);
+
+	// ARM
+	fprintf(f_err, "arm_r0 = 0x%08x\n", ptrUC->uc_mcontext.arm_r0);
+	fprintf(f_err, "arm_r1 = 0x%08x\n", ptrUC->uc_mcontext.arm_r1);
+	fprintf(f_err, "arm_r2 = 0x%08x\n", ptrUC->uc_mcontext.arm_r2);
+	fprintf(f_err, "arm_r3 = 0x%08x\n", ptrUC->uc_mcontext.arm_r3);
+	fprintf(f_err, "arm_r4 = 0x%08x\n", ptrUC->uc_mcontext.arm_r4);
+	fprintf(f_err, "arm_r5 = 0x%08x\n", ptrUC->uc_mcontext.arm_r5);
+	fprintf(f_err, "arm_r6 = 0x%08x\n", ptrUC->uc_mcontext.arm_r6);
+	fprintf(f_err, "arm_r7 = 0x%08x\n", ptrUC->uc_mcontext.arm_r7);
+	fprintf(f_err, "arm_r8 = 0x%08x\n", ptrUC->uc_mcontext.arm_r8);
+	fprintf(f_err, "arm_r9 = 0x%08x\n", ptrUC->uc_mcontext.arm_r9);
+	fprintf(f_err, "arm_r10 = 0x%08x\n", ptrUC->uc_mcontext.arm_r10);
+	fprintf(f_err, "arm_fp = 0x%08x\n", ptrUC->uc_mcontext.arm_fp);
+	fprintf(f_err, "arm_ip = 0x%08x\n", ptrUC->uc_mcontext.arm_ip);
+	fprintf(f_err, "arm_sp = 0x%08x\n", ptrUC->uc_mcontext.arm_sp);
+	fprintf(f_err, "arm_lr = 0x%08x\n", ptrUC->uc_mcontext.arm_lr);
+	fprintf(f_err, "arm_pc = 0x%08x\n", ptrUC->uc_mcontext.arm_pc);
 
 	fclose(f_err);
 #endif
